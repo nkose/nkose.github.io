@@ -1,0 +1,47 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    font-size: 4em;
+    color: #573b49;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2em;
+    color: #85586F;
+    text-align: center;
+}
+
+body {
+    background-color: #F8EDE3;
+}
+
+table {
+    background-color: #D0B8A8;
+    width: 60em;
+    margin: 0 auto;
+}
+
+thead {
+    background-color: #85586F;
+}
+
+th {
+    color: #F8EDE3;
+}
+
+td {
+    background-color: #DFD3C3;
+    color: #573b49;
+}
+
+
+
+.code {
+    color: #1a1a1a;
+    background-color: #F8EDE3;
+    font-family: monospace;
+    border-radius: 2px;
+}

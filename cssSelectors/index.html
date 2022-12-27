@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS Selectors</title>
+        <link href="./style.css" type="text/css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>CSS Selectors</h1>
+        <h2>Simple Selectors</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Selector</th>
+                    <th>Description</th>
+                    <th>Syntax</th>
+                    <th>Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Universal Selector</td>
+                    <td>Selects all elements. Optionally, it may be restricted to a specific namespace or to all namespaces.</td>
+                    <td><span class="code">*</span> <span class="code">ns|*</span> <span class="code">*|*</span></td>
+                    <td><span class="code">*</span> will match all the elements of the document.</td>
+                </tr>
+                <tr>
+                    <td>Type Selector</td>
+                    <td>Selects all elements that have the given node name.</td>
+                    <td><span class="code">elementname</span></td>
+                    <td><span class="code">p</span> will match any <span class="code">&lt;p&gt;</span> element.</td>
+                </tr>
+                <tr>
+                    <td>Class Selector</td>
+                    <td>Selects all elements that have the given <span class="code">class</span> attribute.</td>
+                    <td><span class="code">.classname</span></td>
+                    <td><span class="code">.myClass</span> will match any element that has <span class="code">class="myClass"</span>.</td>
+                </tr>
+                <tr>
+                    <td>ID Selector</td>
+                    <td>Selects an element based on the value of its <span class="code">id</span> attribute. There should be only one element with a given ID in a document.</td>
+                    <td><span class="code">#idname</span></td>
+                    <td><span class="code">#myID</span> will match the element that has <span class="code">id="myID"</span>.</td>
+                </tr>
+                    <td>Attribute Selector</td>
+                    <td>Selects all elements that have the given attribute.</td>
+                    <td><span class="code">[attr]</span> <span class="code">[attrb=value]</span> <span class="code">[attr~=value]</span> <span class="code">[attr|=value]</span> <span class="code">[attr^=value]</span> <span class="code">[attr$=value]</span> <span class="code">[attr*=value]</span></td>
+                    <td><span class="code">[autoplay]</span> will match all elements that have the <span class="code">autoplay</span> attribute set (to any value).</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Grouping Selectors</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Description</th>
+                    <th>Syntax</th>
+                    <th>Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>The <span class="code">,</span> selector is a grouping method that selects all the matching nodes.</td>
+                    <td><span class="code">A, B</span></td>
+                    <td><span class="code">div, span</span> will match both <span class="code">&lt;div&gt;</span> and <span class="code">&lt;span&gt;</span> elements.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Combinators</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Combinator</th>
+                    <th>Description</th>
+                    <th>Syntax</th>
+                    <th>Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Descendant combinator</td>
+                    <td>The " " (space) combinator selects nodes that are descendants of the first element.</td>
+                    <td><span class="code">A B</span></td>
+                    <td><span class="code">div span</span> will match all <span class="code">&lt;span&gt;</span> elements that are inside a <span class="code">&lt;div&gt;</span> element.</td>
+                </tr>
+                <tr>
+                    <td>Child combinator</td>
+                    <td>The <span class="code">&gt;</span> combinator selects nodes that are direct children of the first element.</td>
+                    <td><span class="code">A &gt; B</span></td>
+                    <td><span class="code">ul &gt; li</span> will match all <span class="code">&lt;li&gt;</span> elements that are nested directly inside a <span class="code">&lt;ul&gt;</span> element.</td>
+                </tr>
+                <tr>
+                    <td>General sibling combinator</td>
+                    <td>The <span class="code">~</span> combinator selects siblings. This means that the second element follows the first (though not necessarily immediately), and both share the same parent.</td>
+                    <td><span class="code">A ~ B</span></td>
+                    <td><span class="code">p ~ span</span> will match all <span class="code">&lt;span&gt;</span> elements that follow a <span class="code">&lt;p&gt;</span> element, immediately or not.</td>
+                </tr>
+                <tr>
+                    <td>Adjacent sibling combinator</td>
+                    <td>The <span class="code">+</span> combinator matches the second element only if it immediately follows the first element.</td>
+                    <td><span class="code">A + B</span></td>
+                    <td><span class="code">h2 + p</span> will match the first <span class="code">&lt;p&gt;</span> element that <em>immediately</em> follows an <span class="code">&lt;h2&gt;</span> element.</td>
+                </tr>
+                <tr>
+                    <td>Column combinator</td>
+                    <td>The <span class="code">||</span> combinator selects nodes which belong to a column.</td>
+                    <td><span class="code">A || B</span></td>
+                    <td><span class="code">col || td</span> will match all <span class="code">&lt;td&gt;</span> elements that belong to the scope of the <span class="code">&lt;col&gt;</span>.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
